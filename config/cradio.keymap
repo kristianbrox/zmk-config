@@ -3,11 +3,30 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 #include <dt-bindings/zmk/bt.h>
+#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
 
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_34keys.h"
 #include "../zmk-nodefree-config/norwegian.dtsi"
+
+
+
+#define NAV 1
+#define FN 2
+#define NUM 3
+#define SYS 4
+#define UC 5
+#define MOUSE 6
+
+
+#include "combos.dtsi"  // requires layer aliases
+#include "mouse.dtsi"
+
+
+#define XXX &none
+#define ___ &trans
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
