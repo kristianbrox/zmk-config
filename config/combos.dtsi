@@ -7,6 +7,9 @@
   ╰───────────╮ LH1 LH0 │ │ RH0 RH1 ╭───────────╯
               ╰─────────╯ ╰─────────╯ */
 
+// Testing including helper here as well:
+#include "../zmk-nodefree-config/helper.h"
+
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
@@ -20,18 +23,6 @@
 #define HRC_LPAR   &hmr_lpar_lt RS(LCTRL) 0
 #define HRC_RPAR   &hmr_rpar_gt LA(LCTRL) 0
 
-// Do I have to define combos somewhere?
-#define ZMK_COMBO(name, combo_bindings, keypos, combo_term) \
-    / { \
-        combos { \
-            compatible = "zmk,combos"; \
-            combo_ ## name { \
-                key-positions = <keypos>; \
-                bindings = <combo_bindings>; \
-                timeout-ms = <combo_term>; \
-            }; \
-        }; \
-    };
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,   &kp ESC,       LT3 LT2,     DEF NAV NUM, COMBO_TERM_FAST)
