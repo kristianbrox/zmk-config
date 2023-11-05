@@ -7,8 +7,6 @@
   ╰───────────╮ LH1 LH0 │ │ RH0 RH1 ╭───────────╯
               ╰─────────╯ ╰─────────╯ */
 
-// Testing including helper here as well:
-#include "../zmk-nodefree-config/helper.h"
 
 // use require-prior-idle-ms for combos
 #undef COMBO_HOOK
