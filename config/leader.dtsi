@@ -16,7 +16,7 @@ tapping the leader key. */
 ZMK_LEADER_SEQUENCE(de_ae,      &no_ae,         RM4)  // æ/Æ
 ZMK_LEADER_SEQUENCE(de_oe,      &no_oe,         RM3)  // ø/Ø
 ZMK_LEADER_SEQUENCE(de_ue,      &no_aa,         RT4)  // å/Å
-// ZMK_LEADER_SEQUENCE(de_eszett,  &de_eszett,     LM2)  // ß
+/* ZMK_LEADER_SEQUENCE(de_eszett,  &de_eszett,     LM2)  // ß */
 
 /* Greek letters */
 
