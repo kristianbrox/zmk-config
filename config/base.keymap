@@ -53,7 +53,7 @@
 #define NO_HAT   LS(RBKT)  // ^
 #define NO_LESS  NON_US_BACKSLASH // <
 #define NO_MORE  LS(NON_US_BACKSLASH) // >
-#define NO_FLSH LS(N7) // /
+#define NO_FSLH LS(N7) // /
 #define NO_BLSH	 EQUAL // /\
 #define NO_OLSH	 RA(NON_US_BACKSLASH) // \
 
