@@ -8,6 +8,7 @@
     #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
 #endif
 
+#define HOST_OS 1
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 #include "zmk-helpers/unicode-chars/norwegian.dtsi"
@@ -192,18 +193,18 @@ ZMK_TRI_STATE(swapper,
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
 SIMPLE_MORPH(comma_morph, SFT, &kp COMMA, &comma_inner_morph)
-SIMPLE_MORPH(comma_inner_morph, CTL, &kp SEMICOLON, &kp LESS_THAN)
+SIMPLE_MORPH(comma_inner_morph, CTL, &kp NO_SCOL, &kp NO_LESS)
 
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
 SIMPLE_MORPH(dot_morph, SFT, &kp DOT, &dot_inner_morph)
-SIMPLE_MORPH(dot_inner_morph, CTL, &kp COLON, &kp GREATER_THAN)
+SIMPLE_MORPH(dot_inner_morph, CTL, &kp NO_COL, &kp NO_MORE)
 
 // tap: qmark | shift + tap: excl
-SIMPLE_MORPH(qexcl, SFT, &kp QMARK, &kp EXCL)
+SIMPLE_MORPH(qexcl, SFT, &kp NO_QMARK, &kp NO_EXCL)
 
 // tap: left/right parenthesis | shft + tap: less-than/greater-than
-SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
-SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
+SIMPLE_MORPH(lpar_lt, SFT, &kp NO_LPAR, &kp LT)
+SIMPLE_MORPH(rpar_gt, SFT, &kp NO_RPAR, &kp GT)
 
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 ZMK_HOLD_TAP(lt_spc,
@@ -269,9 +270,9 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-    ___           ___           &kp LS(TAB)   &swapper      ___              &kp PG_UP     NAV_BSPC      NAV_UP        NAV_DEL       ___           
+    ___           ___           &kp LS(TAB)   &swapper      ___              &kp PG_UP     NAV_BSPC      PG_DOWN       NAV_DEL       ___           
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
-    &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___              &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT     &kp RET       
+    &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     ___              &kp PG_RIGHT  NAV_DOWN      NAV_UP        NAV_RIGHT     &kp RET       
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
     ___           ___           ___           ___           ___              &kp INS       &kp TAB       ___           ___           ___           
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ 
