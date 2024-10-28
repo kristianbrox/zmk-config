@@ -37,14 +37,14 @@
 #define NO_EQL	 LS(N0)    // =
 #define NO_QMARK LS(NO_PLUS) // ?
 #define NO_QUOT	 LS(N2)    // "
-#define NO_COL	 LS(COMMA) // :
-#define NO_SCOL  LS(DOT)   // ;
+#define NO_COL	 LS(DOT) // :
+#define NO_SCOL  LS(COMMA)   // ;
 #define NO_TILDE RA(RBKT)  // ~
 #define NO_HAT   LS(RBKT)  // ^
 #define NO_LESS  NON_US_BACKSLASH // <
 #define NO_MORE  LS(NON_US_BACKSLASH) // >
 #define NO_FSLH LS(N7) // /
-#define NO_BLSH	 EQUAL // /\
+#define NO_BSLH	 EQUAL // /\
 #define NO_OLSH	 RA(NON_US_BACKSLASH) // \
 
 /* Horizontal combos - left hand */
@@ -83,8 +83,8 @@ ZMK_COMBO(hash,  &kp NO_HASH,  LT2 LM2,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_
 ZMK_COMBO(dllr,  &kp NO_DLLR,  LT1 LM1,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(prcnt, &kp NO_PRCNT, LT0 LM0,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(grave, &kp NO_PIPE,  LM3 LB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(bslh,  &kp NO_APOS,  LM2 LB2,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(grave, &kp NO_APOS,  LM3 LB3,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bslh,  &kp NO_BSLH,  LM2 LB2,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(equal, &kp NO_EQL,   LM1 LB1,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(tilde, &kp NO_TILDE, LM0 LB0,     DEF NAV NUM, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
