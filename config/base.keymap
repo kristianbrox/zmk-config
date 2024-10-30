@@ -8,7 +8,7 @@
     #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
 #endif
 
-#define HOST_OS 1
+// #define HOST_OS 1
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 // #include "zmk-helpers/unicode-chars/norwegian.dtsi"
@@ -344,7 +344,7 @@ ZMK_LAYER(game,
 
 ZMK_LAYER(game2,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮  ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ 
-    &kp NO_PIPE   &kp Q         &kp W         &kp T         &mt M N          &kp LNLCK     &kp N7        &kp N8         &kp N9       &kp NO_DASH        
+    &kp NO_PIPE   &kp Q         &kp W         &kp T         &kp M            &kp LNLCK     &kp N7        &kp N8         &kp N9       &kp NO_DASH        
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
     &kp CLCK      &kp A         &kp S         &kp D         &kp G            &kp DOT       &kp N4        &kp N5         &kp N6       &kp NO_PLUS           
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤  ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ 
